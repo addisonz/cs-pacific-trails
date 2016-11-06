@@ -17,6 +17,7 @@ header {
     background-color: #000033;
     color: #FFFFFF;
     background-image: url("images/sunset.jpg");
+    background-repeat: no-repeat;
     height: 60px;
     padding-top: 1em;
     text-align: center;
@@ -33,7 +34,7 @@ h1 {
 
 h3 {
     font-family: Georgia, Times, "Times New Roman", serif;
-    color: darkblue;
+    color: #00008B;
 }
 
 main {
@@ -42,6 +43,50 @@ main {
     background-color: #FFFFFF;
     margin-left: 0;
     font-size: 90%;
+}
+
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+    padding-left: 25px;
+}
+
+input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#Submit {
+    margin-left: 130px;
+}
+
+#myComments {
+    height: 50px;
+    width: 175px;
+}
+
+#arrivaldate {
+    width: 170px;
+}
+
+#nights {
+    width: 170px;
+}
+
+label {
+    float: left;
+    text-align: left;
+}
+
+input[type="submit"] {
+    margin-left: 0
 }
 
 p {
@@ -64,6 +109,7 @@ nav a {
     font-weight: bold;
     text-decoration: none;
     display: block;
+    transition: color 3s ease-out;
 }
 
 nav ul {
@@ -118,7 +164,7 @@ footer {
 #homehero {
     content: url(images/coasthero.jpg);
     background-size: 100% 100%;
-    height: 200px;
+    height: 300px;
     width: 550px;
     background-repeat: no-repeat;
     margin-left: 0px;
@@ -175,14 +221,116 @@ article {
     display: block;
 }
 
-#mobile {
-    display: inline;
-}
-
 #desktop {
     display: none;
 }
 
-@media only screen and (max-width: 64em) {}
+video,
+embed {
+    float: right;
+    padding-left: 20px;
+}
 
-@media only screen and (max-width: 37.5em) {}
+@media only screen and (max-width: 64em) {
+    #mobile {
+        display: none;
+    }
+    body {
+        margin: 0px;
+        background-color: #FFFFFF;
+    }
+}
+
+#wrapper {
+    min-width: 0px;
+    width: auto;
+    box-shadow: none;
+}
+
+main {
+    margin-left: 0px;
+}
+
+nav {
+    float: none;
+    width: auto;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav li {
+    display: inline;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+#homehero {
+    margin: 0px;
+    height: 200px;
+}
+
+#yurthero {
+    margin: 0px;
+    height: 200px;
+}
+
+#trailhero {
+    margin: 0px;
+    height: 200px;
+}
+
+footer {
+    margin: 0px;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .description {
+        text-align: left;
+    }
+    header {
+        padding-top: 1em;
+    }
+    main {
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    nav {
+        padding: 0;
+    }
+    nav li {
+        display: block;
+        margin: 0px;
+        border-bottom-style: solid;
+        border-bottom: 2px;
+        border-bottom-color: #330000;
+    }
+    :link {
+        display: block;
+    }
+    #homehero {
+        background-image: none;
+        height: 0;
+    }
+    #yurthero {
+        background-image: none;
+        height: 0;
+    }
+    #trailhero {
+        background-image: none;
+        height: 0;
+    }
+    #mobile {
+        display: inline;
+    }
+    #desktop {
+        display: none;
+    }
+}
